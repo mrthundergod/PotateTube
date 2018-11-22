@@ -1,7 +1,12 @@
 import youtube_dl
 import tkinter as tk
-import re
+import re, os
 
+def downloadPath():
+    n_cwd=os.getcwd()[:12]
+    cwd=n_cwd.replace('\\',"/")
+    path=cwd+'Downloads/PotatoTube/'
+    return path
 
 def urlTest(data):
     testIs=re.match('https://www.youtube.com/',data)
@@ -15,7 +20,6 @@ def getUrlWindow(data=None):
 
     if urlTest(data) != None:
         print(data, ' is the youtube link and is being downloaded as mp3 file.' )
-
         return data
     else:
         print('Not a Youtube Link!! Try Again :D ')
@@ -23,13 +27,14 @@ def getUrlWindow(data=None):
 
     return data
 
-def sendtoYDL(data):
+def sendtoYDL(data, path):
     ydl_opts ={
+        'outtmpl':path,
         'format': 'bestaudio/best',
         'postprocessors':[{
             'key': 'FFmpegExtractAudio',
             'prefferedcodec': 'mp3',
-            'preferredquality': '192',
+            'preferredquality': '320',
             }]
         }
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
@@ -38,3 +43,4 @@ def sendtoYDL(data):
 if __name__ == '__main__':
 
     data = getUrlWindow()
+    sendtoYDL(data, downloadPath())
