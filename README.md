@@ -27,7 +27,7 @@ pip3 install -r prerequisites.txt
 
 ## Future features
 + GUI
-+Multiple format conversion support
++ Multiple format conversion support
 
 ## Thanks
 + rg-3 for youtube-dl
