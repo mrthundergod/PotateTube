@@ -1,34 +1,26 @@
 import youtube_dl
 import tkinter as tk
 import re
-import msvcrt as ms
-data= None
 
 
 def urlTest(data):
     testIs=re.match('https://www.youtube.com/',data)
     return testIs
 
-def getUrlWindow(data):
+def getUrlWindow(data=None):
     root=tk.Tk()
-    show=tk.Label(root, text="Potato Tube")
-    show1=tk.Label(root, text="Processing!")
-    show.pack()
-    show1.pack()
-   
-    while data == None:
-        data = root.clipboard_get()
-        #ms.getch()
+    root.withdraw()
 
-        if urlTest(data) != None:
-            print(data)
-            
-            return data
-        else:
-            #data = None
-            print('try again')
-            continue
-    root.mainloop()
+    data = root.clipboard_get()
+
+    if urlTest(data) != None:
+        print(data, ' is the youtube link and is being downloaded as mp3 file.' )
+
+        return data
+    else:
+        print('Not a Youtube Link!! Try Again :D ')
+        root.clipboard_clear()
+
     return data
 
 def sendtoYDL(data):
@@ -45,4 +37,4 @@ def sendtoYDL(data):
 
 if __name__ == '__main__':
 
-    data = getUrlWindow(data)
+    data = getUrlWindow()
