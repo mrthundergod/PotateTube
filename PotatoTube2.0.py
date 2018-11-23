@@ -15,7 +15,9 @@ def sendtoYDL(data):
     with youtube_dl.YoutubeDL(ydl_opts) as ydl: ydl.download([data])
 
 if __name__ == '__main__':
+    Print("Welcome to PotatoTube! /n Waiting for URL...")
     while True:
         data= getUrlWindow()
         if data==None: continue
         sendtoYDL(data)
+        print("Downloaded. Waiting for URL....")
