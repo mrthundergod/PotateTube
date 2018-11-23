@@ -8,10 +8,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Requires Python 3.x, pip and ffmpeg
++ Requires Python 3.5+,  pip and ffmpeg
 
-Check prerequisites.txt for details, or run the following command:
-            
++ Install youtube-dl module;            
 ``` 
 pip install youtube-dl
 ```
@@ -19,6 +18,7 @@ or
 ````
 pip3 install youtube-dl
 ````
++ Install FFMPEG from [here](https://www.ffmpeg.org/).
 
 ## Deployment
 
