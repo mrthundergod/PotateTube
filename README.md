@@ -1,5 +1,5 @@
 # PotatoTube
-Copy a URL from YouTube and run the script. Find the 320kbps mp3 of it at `/Downloads/PotatoTube`. Done.
+Run the script. Copy the youtube link. Find the 320kbps mp3 of it at `/Downloads/PotatoTube`. Done.
 
 ## Getting Started
 
@@ -21,9 +21,11 @@ pip3 install -r prerequisites.txt
 
 ## Deployment
 
-1. Copy the URL
-2. Double click on main.py
+1. Run `PotatoTube_2.0.py`
+2.Copy 
 3. Find the file in `/Downloads/PotatoTube`
+4. Profit 
+5. ???
 
 ## Future features
 + GUI
