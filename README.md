@@ -21,7 +21,7 @@ pip3 install -r prerequisites.txt
 
 ## Deployment
 
-1. Run `PotatoTube_2.0.py`
+1. Run `PotatoTube_2.0.py`. If you wanna see better formatted code open `PotatoTube2.0_detailed.py`
 2.Copy 
 3. Find the file in `/Downloads/PotatoTube`
 4. Profit 
