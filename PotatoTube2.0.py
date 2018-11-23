@@ -5,7 +5,7 @@ def getUrlWindow(data=None):
     root.withdraw()
     data = root.clipboard_get()
     if re.match('https://www.youtube.com/',data) != None:
-        print(data, ' is the youtube link and is being downloaded as mp3 file.')
+        print('Downloading as MP3')
         return data
     else: return None
 
