@@ -31,7 +31,6 @@ pip3 install -r prerequisites.txt
 
 ## Thanks
 + rg-3 for youtube-dl
-+ thomast3 for the crucial code revision and advices
 + Imperial_Tigrera for the constant support
 
 
